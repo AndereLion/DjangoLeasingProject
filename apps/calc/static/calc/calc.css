@@ -1,0 +1,29 @@
+.form_box {
+    width: 100%;
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+
+}
+
+.form_inner {
+    background: #e0dede;
+    border: #c2bfbf 2px solid;
+    display: flex;
+    justify-content: center;
+    width: 400px;
+    height: 250px
+}
+
+.form_original {
+    text-align: right;
+}
+.form_original input{
+    border-radius: 10px;
+}
+
+.text_area {
+    height: 50px;
+    border-radius: 10px;
+}

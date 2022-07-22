@@ -1,10 +1,15 @@
 {% extends 'home/base.html' %}
 {% block main %}
-    <form method="post">
-        {% csrf_token %}
-        {{ form }}
-{#                <label for="car_brand"></label>#}
-{#                <input id="car_brand" type="text" name="car_brand" value="Enter car brand">#}
-        <input type="submit">
-    </form>
+    <div class="form_box">
+        <div class="form_inner">
+            <form class="form_original" method="post">
+                {% csrf_token %}
+                {{ form.as_p }}
+
+                {#                <label for="car_brand"></label>#}
+                {#                <input id="car_brand" type="text" name="car_brand" value="Enter car brand">#}
+                <input type="submit" name="submit" value="Submit">
+            </form>
+        </div>
+    </div>
 {% endblock main %}

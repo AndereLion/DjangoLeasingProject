@@ -1,0 +1,10 @@
+{% extends 'home/base.html' %}
+{% block main %}
+    <form method="post">
+        {% csrf_token %}
+        {{ form }}
+{#                <label for="car_brand"></label>#}
+{#                <input id="car_brand" type="text" name="car_brand" value="Enter car brand">#}
+        <input type="submit">
+    </form>
+{% endblock main %}

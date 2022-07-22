@@ -9,7 +9,7 @@ class CarRequest(models.Model):
     car_model = models.CharField(max_length=50)
     car_year = models.IntegerField(validators=[MinValueValidator(2011), MaxValueValidator(2022)])
     car_first_payment = models.IntegerField(validators=[MinValueValidator(35000)])
-    phone_number = models.CharField(max_length=20, validators=[MinLengthValidator(13), MinLengthValidator(9)])
+    phone_number = models.CharField(max_length=20, validators=[MinLengthValidator(9), MaxLengthValidator(13)])
     email = models.EmailField(validators=[validate_email])
     created_at = models.DateTimeField(auto_now_add=True, )
     updated_at = models.DateTimeField(auto_now=True)

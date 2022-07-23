@@ -5,6 +5,7 @@ from django.core.validators import validate_email, MaxValueValidator, MinValueVa
 
 # Create your models here.
 class CarInStock(models.Model):
+    img = models.ImageField(upload_to='')
     brand = models.CharField(max_length=50)
     model = models.CharField(max_length=50)
     year = models.IntegerField(validators=[MinValueValidator(2011), MaxValueValidator(2022)])

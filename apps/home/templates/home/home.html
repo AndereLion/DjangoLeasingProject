@@ -27,13 +27,8 @@
 
                         <div class="col">
                             <div class="card shadow-sm">
-                                <svg class="bd-placeholder-img card-img-top" width="100%" height="225"
-                                     xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: صورة مصغرة"
-                                     preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title>
-                                    <rect width="100%" height="100%" fill="#55595c"></rect>
-                                    <text x="50%" y="50%" fill="#eceeef" dy=".3em">First
-                                        payment: {{ car.first_payment }}</text>
-                                </svg>
+                                <img src="{{ car.img.url }}" style="height: 200px" alt="">
+
 
                                 <div class="card-body">
                                     <p class="card-text">{{ car.brand }} {{ car.model }} {{ car.year }}</p>
@@ -44,7 +39,7 @@
                                             <button type="button" class="btn btn-sm btn-outline-secondary">Details
                                             </button>
                                         </div>
-                                        <small class="text-muted">9 دقائق</small>
+                                        <small class="text-muted">First payment: {{ car.first_payment }}</small>
                                     </div>
                                 </div>
                             </div>

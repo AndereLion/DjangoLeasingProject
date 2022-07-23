@@ -1,0 +1,15 @@
+body, .album {
+    background-image: url("HD-1080p-Cars-Wallpapers-Free.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+
+}
+body{
+    height: auto;
+}
+footer {
+    background-color: RGBA(33, 37, 41, 2);
+
+
+}
+

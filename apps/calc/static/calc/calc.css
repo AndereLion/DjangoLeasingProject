@@ -5,7 +5,8 @@
     justify-content: center;
     margin-top: 30px;
 }
-.form_box p{
+
+.form_box p {
     font-size: 25px;
     margin: 15px;
 }
@@ -32,4 +33,21 @@
 .text_area {
     height: 50px;
     border-radius: 10px;
+}
+
+
+.thank_you_box {
+    width: 100%;
+    height: 880px;
+    display: flex;
+    justify-content: center;
+}
+
+.thank_you_inner {
+    margin-top: 100px;
+    width: 450px;
+    text-align: center;
+}
+.thank_you_inner p{
+    font-size: 30px;
 }

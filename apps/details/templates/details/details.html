@@ -1,0 +1,28 @@
+{% extends 'home/base.html' %}
+
+{% block main %}
+    {% load static %}
+    <div class="main_box">
+        <div class="main_inner">
+            <div class="main_inner_top">
+                <div class="main_inner_top_left">
+                    <p><b>Brand:</b> {{ car.brand }}</p>
+                    <p><b>Model:</b> {{ car.model }}</p>
+                    <p><b>Year:</b> {{ car.year }}</p>
+                    <p><b>Mileage:</b> {{ car.mileage }}</p>
+                </div>
+                <div class="main_inner_top_right">
+                    <p><b>Engine:</b> {{ car.engine }}</p>
+                    <p><b>Type of fuel:</b> {{ car.type_of_fuel }}</p>
+                    <p><b>Type of gearbox:</b> {{ car.type_of_gearbox }}</p>
+                    <p><b>First payment:</b> {{ car.first_payment }}</p>
+                </div>
+            </div>
+            <div class="main_inner_bottom">
+                {% for photo in car_portfolio %}
+                    <img class="img_portfolio" src="{{ photo.img.url }}" alt="">
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+{% endblock main %}

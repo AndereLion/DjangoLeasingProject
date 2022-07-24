@@ -38,7 +38,8 @@ INSTALLED_APPS = [
     # Apps
     'apps.home.apps.HomeConfig',
     'apps.calc.apps.CalcConfig',
-    'apps.about.apps.AboutConfig'
+    'apps.about.apps.AboutConfig',
+    'apps.details.apps.DetailsConfig'
 ]
 
 MIDDLEWARE = [

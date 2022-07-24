@@ -4,12 +4,44 @@ body, .album {
     background-repeat: no-repeat;
 
 }
-body{
+
+body {
     height: auto;
 }
+
 footer {
     background-color: RGBA(33, 37, 41, 2);
+}
+
+.absolute_box {
+    width: 450px;
+    height: 330px;
+    border-radius: 10px;
+    position: absolute;
+    background: rgba(224, 222, 201, 0.4);
+    opacity: 70%;
+    left: 14%;
+    top: 100px;
+
+}
+
+.form_absolut  {
+   display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+
+}
+input{
+    width: 80%;
+    border-radius: 2px;
 
 
+}
+
+.form_absolut p{
+    width: 300px;
+font-size: 20px;
 }
 

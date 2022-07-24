@@ -1,0 +1,46 @@
+.main_box {
+    width: 100%;
+    height: 880px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.main_inner {
+    width: 700px;
+    background: rgba(224, 222, 201, 0.5);
+    opacity: 90%;
+    height: 90%;
+    border: #c2bfbf 2px solid;
+    border-radius: 10px;
+}
+
+.main_inner_top {
+    height: 30%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 30px;
+
+}
+
+.main_inner_bottom {
+    height: 70%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 20px;
+}
+
+.main_inner_top p {
+    font-size: 22px;
+}
+
+.img_portfolio {
+    height: 170px;
+    border-radius: 10px;
+
+
+}

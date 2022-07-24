@@ -17,6 +17,7 @@
     <link rel="stylesheet" href="{% static 'home/home.css' %}">
     <link rel="stylesheet" href="{% static 'calc/calc.css' %}">
     <link rel="stylesheet" href="{% static 'about/about.css' %}">
+    <link rel="stylesheet" href="{% static 'details/details.css' %}">
 </head>
 <body>
 <header class="p-3 text-bg-dark">
@@ -62,7 +63,7 @@
         <li><a href="{% url 'home:home' %}" class="nav-link px-2 text-secondary">Home</a></li>
         <li><a href="{% url 'calc:calc_view' %}" class="nav-link px-2 text-white">Calculate</a></li>
         <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Pricing</a></li>
-        <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">About</a></li>
+        <li class="nav-item"><a href="{% url 'about:about' %}" class="nav-link px-2 text-muted">About</a></li>
     </ul>
 </footer>
 

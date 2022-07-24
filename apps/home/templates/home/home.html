@@ -3,7 +3,17 @@
     {% load static %}
 
     <main>
+        <div class="absolute_box">
+            <form class="form_absolut" method="post">
+                {% csrf_token %}
+                <h4>Calculate payments for yourself</h4>
 
+                {{ form }}
+                 <p>~ Peyment per month = {{ result }}</p>
+                <input type="submit" name="submit" value="Submit">
+            </form>
+
+        </div>
         <section class="py-5 text-center container">
             <div class="row py-lg-5">
                 <div class="col-lg-6 col-md-8 mx-auto">
@@ -27,7 +37,7 @@
 
                         <div class="col">
                             <div class="card shadow-sm">
-                                <img src="{{ car.img.url }}" style="height: 200px" alt="">
+                                <img src="{{ car.img.url }}" alt="">
 
 
                                 <div class="card-body">
@@ -38,7 +48,7 @@
                                                 <button type="button" class="btn btn-sm btn-outline-secondary">Calculate
                                                 </button>
                                             </a>
-                                            <a href="{% url 'details:derails_view' %}" class="nav-link px-2 text-white">
+                                            <a href="details/{{ car.id }}" class="nav-link px-2 text-white">
                                                 <button type="button" class="btn btn-sm btn-outline-secondary">Details
                                                 </button>
                                             </a>

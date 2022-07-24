@@ -4,14 +4,13 @@ from django.urls import reverse
 from .forms import ReviewForm
 
 
-
 def calc_view(request, *args, **kwargs):
     if request.method == "POST":
         form = ReviewForm(request.POST)
         if form.is_valid():
             form.save()
             return redirect(reverse('calc:thank_you', ))
-            # return render(request, 'calc/thank_you.html', context={"form_data": form.cleaned_data})
+
     else:
         form = ReviewForm()
     return render(request, 'calc/calc.html', context={"form": form})

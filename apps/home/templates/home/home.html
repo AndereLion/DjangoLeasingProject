@@ -9,7 +9,7 @@
                 <h4>Calculate payments for yourself</h4>
 
                 {{ form }}
-                 <p>~ Peyment per month = {{ result }}</p>
+                <p>~ Peyment per month = {{ result }}</p>
                 <input type="submit" name="submit" value="Submit">
             </form>
 
@@ -48,7 +48,8 @@
                                                 <button type="button" class="btn btn-sm btn-outline-secondary">Calculate
                                                 </button>
                                             </a>
-                                            <a href="details/{{ car.id }}" class="nav-link px-2 text-white">
+                                            <a href="{% url 'details:details' car.id %}"
+                                               class="nav-link px-2 text-white">
                                                 <button type="button" class="btn btn-sm btn-outline-secondary">Details
                                                 </button>
                                             </a>

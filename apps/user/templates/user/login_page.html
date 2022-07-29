@@ -1,0 +1,19 @@
+{% extends 'home/base.html' %}
+
+{% block main %}
+    <div class="main_box_login">
+        <div class="form_login_box">
+            <form class="form_login" action="{% url 'user:user_login' %}" method="POST">
+                {% csrf_token %}
+
+                <input type="text" name="username" placeholder="username">
+
+
+                <input type="password" name="password" placeholder="password">
+
+                <input type="submit" value="Login">
+
+            </form>
+        </div>
+    </div>
+{% endblock %}

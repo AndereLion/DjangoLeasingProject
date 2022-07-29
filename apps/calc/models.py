@@ -4,6 +4,7 @@ from django.core.validators import validate_email, MaxValueValidator, MinValueVa
 
 
 # Create your models here.
+
 class CarRequest(models.Model):
     car_brand = models.CharField(max_length=50)
     car_model = models.CharField(max_length=50)

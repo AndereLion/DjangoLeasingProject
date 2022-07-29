@@ -24,7 +24,7 @@ SECRET_KEY = 'django-insecure-s9u22!p(bt&%6vzc=o3s_sw7#v*=a4g+u-_2b3co(&9&lb2a0z
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['127.0.0.1']
+ALLOWED_HOSTS = ['localhost', '127.0.0.1']
 
 # Application definition
 
@@ -39,17 +39,20 @@ INSTALLED_APPS = [
     'apps.home.apps.HomeConfig',
     'apps.calc.apps.CalcConfig',
     'apps.about.apps.AboutConfig',
-    'apps.details.apps.DetailsConfig'
+    'apps.details.apps.DetailsConfig',
+    'apps.user.apps.UserConfig'
 ]
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
+    'whitenoise.middleware.WhiteNoiseMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+
 ]
 
 ROOT_URLCONF = 'DjangoCarLeasingProject.urls'
@@ -119,11 +122,13 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.0/howto/static-files/
 
-STATIC_URL = 'static/'
-MEDIA_URL = '/img/'
+STATIC_URL = '/static/'
+MEDIA_URL = '/images/'
 STATICFILES_DIRS = [BASE_DIR / 'static']
+
+MEDIA_ROOT = os.path.join(BASE_DIR, 'static/images')
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.0/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
-MEDIA_ROOT = os.path.join(BASE_DIR, 'static/img')

@@ -5,6 +5,8 @@ from django.contrib.auth import login, authenticate, logout
 
 # Create your views here.
 def user_login_view(request, *args, **kwargs):
+    if request.user.is_authenticated:
+        return redirect('home:home')
     if request.method == 'POST':
         username = request.POST['username']
         password = request.POST['password']
@@ -23,4 +25,4 @@ def user_login_view(request, *args, **kwargs):
 
 def logout_user(request):
     logout(request)
-    return redirect('/user/login')
+    return redirect('user:user_login')

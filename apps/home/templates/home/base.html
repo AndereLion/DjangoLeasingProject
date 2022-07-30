@@ -19,6 +19,7 @@
     <link rel="stylesheet" href="{% static 'about/about.css' %}">
     <link rel="stylesheet" href="{% static 'details/details.css' %}">
     <link rel="stylesheet" href="{% static 'user/user_login.css' %}">
+    <link rel="stylesheet" href="{% static 'user/user_created.css' %}">
 </head>
 <body>
 <header class="p-3 text-bg-dark">
@@ -51,7 +52,7 @@
                     <a href="{% url 'user:user_login' %}">
                         <button type="button" class="btn btn-outline-light me-2">Login</button>
                     </a>
-                    <a href="">
+                    <a href="{% url 'user:user_sign_up' %}">
                         <button type="button" class="btn btn-warning">Sign-up</button>
                     </a>
                 {% endif %}
@@ -61,7 +62,7 @@
     </div>
 </header>
 
-{#<a href="{% url 'home' %}">Home</a>#}
+
 
 {% block main %}
 {% endblock main %}

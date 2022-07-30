@@ -1,0 +1,11 @@
+{% extends 'home/base.html' %}
+{% block main %}
+    <div class="user_created_box">
+        <div class="user_created_inner">
+            <h1>User created =) </h1>
+            <a href="{% url 'user:user_login' %}">
+                <button class="btn btn-outline-light me-2">Log in</button>
+            </a>
+        </div>
+    </div>
+{% endblock main %}

@@ -2,22 +2,38 @@
 
 {% block main %}
     <div class="main_box_login">
+
         <div class="form_login_box">
-            <form class="form_login" action="{% url 'user:user_login' %}" method="POST">
-                {% csrf_token %}
 
-                <input type="text" name="username" placeholder="username">
+            {% if page == 'user_sign_up' %}
+                <h3>Register user</h3>
+                <form class="form_login" method="POST" action="{% url 'user:user_sign_up' %}">
+                    {% csrf_token %}
+                    {{ form.as_p }}
+                    {% if messages %}
+                        {% for message in messages %}
+                            <h4>{{ message }} </h4>
+                        {% endfor %}
+                    {% endif %}
+                    <input type="submit" value="Sign-up">
+                </form>
+            {% else %}
+                <form class="form_login" action="{% url 'user:user_login' %}" method="POST">
+                    {% csrf_token %}
+
+                    <input type="text" name="username" placeholder="username">
 
 
-                <input type="password" name="password" placeholder="password">
-                {% if messages %}
-                    {% for message in messages %}
-                        <h4 style="text-align: center">{{ message }} </h4>
-                    {% endfor %}
-                {% endif %}
-                <input type="submit" value="Login">
+                    <input type="password" name="password" placeholder="password">
+                    {% if messages %}
+                        {% for message in messages %}
+                            <h4>{{ message }} </h4>
+                        {% endfor %}
+                    {% endif %}
+                    <input type="submit" value="Login">
 
-            </form>
+                </form>
+            {% endif %}
         </div>
     </div>
 {% endblock %}

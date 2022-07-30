@@ -1,0 +1,12 @@
+.user_created_box{
+    width: 100%;
+    height: 880px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.user_created_inner{
+    margin-bottom: 300px;
+    width: 800px;
+    text-align: center;
+}

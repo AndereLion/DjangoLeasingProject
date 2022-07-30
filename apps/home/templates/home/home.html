@@ -48,10 +48,14 @@
                                                 <button type="button" class="btn btn-sm btn-outline-secondary">Calculate
                                                 </button>
                                             </a>
+
                                             <a href="{% url 'details:details' car.id %}"
                                                class="nav-link px-2 text-white">
                                                 <button type="button" class="btn btn-sm btn-outline-secondary">Details
                                                 </button>
+                                            </a>
+                                            <a href="{% url 'admin_panel:car_delete' car.id %}">
+                                                <button type="button" class="btn btn-danger">Delete</button>
                                             </a>
                                         </div>
                                         <small class="text-muted">First payment: {{ car.first_payment }}</small>

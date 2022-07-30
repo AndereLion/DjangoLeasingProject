@@ -1,6 +1,7 @@
 from django.shortcuts import render, redirect
 from django.urls import reverse
 from .forms import CarInStockForm
+from .models import CarInStock
 
 
 def car_added_view(request):
@@ -20,3 +21,8 @@ def admin_panel_view(request, *args, **kwargs):
     else:
         form = CarInStockForm()
     return render(request, 'admin_panel/admin_panel.html', context={"form": form})
+
+
+def car_delete_view(request, *args, **kwargs):
+    CarInStock.objects.get(pk=kwargs['pk']).delete()
+    return redirect('home:home')

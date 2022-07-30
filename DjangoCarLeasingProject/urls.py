@@ -24,7 +24,8 @@ urlpatterns = [
     path('calc/', include('apps.calc.urls')),
     path('about/', include('apps.about.urls')),
     path('details/', include('apps.details.urls')),
-    path('user/', include('apps.user.urls'))
+    path('user/', include('apps.user.urls')),
+    path('admin_panel/', include('apps.admin_panel.urls'))
 
 ]
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

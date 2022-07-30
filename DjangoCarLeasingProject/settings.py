@@ -40,7 +40,8 @@ INSTALLED_APPS = [
     'apps.calc.apps.CalcConfig',
     'apps.about.apps.AboutConfig',
     'apps.details.apps.DetailsConfig',
-    'apps.user.apps.UserConfig'
+    'apps.user.apps.UserConfig',
+    'apps.admin_panel.apps.AdminPanelConfig'
 ]
 
 MIDDLEWARE = [

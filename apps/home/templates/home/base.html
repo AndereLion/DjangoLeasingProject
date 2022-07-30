@@ -20,6 +20,8 @@
     <link rel="stylesheet" href="{% static 'details/details.css' %}">
     <link rel="stylesheet" href="{% static 'user/user_login.css' %}">
     <link rel="stylesheet" href="{% static 'user/user_created.css' %}">
+    <link rel="stylesheet" href="{% static 'admin_panel/admin_panel.css' %}">
+    <link rel="stylesheet" href="{% static 'admin_panel/car_added.css' %}">
 </head>
 <body>
 <header class="p-3 text-bg-dark">
@@ -37,7 +39,8 @@
                 <li><a href="#" class="nav-link px-2 text-white">Pricing</a></li>
                 <li><a href="{% url 'about:about' %}" class="nav-link px-2 text-white">About</a></li>
                 {% if request.user.is_superuser %}
-                    <li><a href="#" class="nav-link px-2 text-white">Admin panel</a></li>
+                    <li><a href="{% url 'admin_panel:admin_panel' %}" class="nav-link px-2 text-white">Admin panel</a>
+                    </li>
                 {% endif %}
             </ul>
 

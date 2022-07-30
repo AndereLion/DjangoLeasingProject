@@ -1,7 +1,7 @@
 from django.shortcuts import render
 
 # Create your views here.
-from apps.home.models import CarInStock, ImagesCarPortfolio
+from apps.admin_panel.models import CarInStock, ImagesCarPortfolio
 
 
 def details_view(request, *args, **kwargs):

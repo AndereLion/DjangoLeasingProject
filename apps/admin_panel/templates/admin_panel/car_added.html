@@ -1,0 +1,12 @@
+{% extends 'home/base.html' %}
+{% block main %}
+    <div class="car_added_box">
+        <div class="car_added_box_inner">
+            <h1>Car added! = )</h1>
+
+            <a href="{% url 'admin_panel:admin_panel' %}">
+                <button type="button" class="btn btn-warning">Add more</button>
+            </a>
+        </div>
+    </div>
+{% endblock %}

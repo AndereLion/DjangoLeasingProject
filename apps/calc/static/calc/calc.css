@@ -12,6 +12,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+
 }
 
 .form_inner {
@@ -51,6 +52,9 @@
     width: 450px;
     text-align: center;
 }
-.thank_you_inner p{
+
+.thank_you_inner p {
     font-size: 30px;
+    display: flex;
+
 }

@@ -1,6 +1,6 @@
 from django.shortcuts import render
 
-from apps.home.models import CarInStock
+from apps.admin_panel.models import CarInStock
 from .forms import OwnCalculatingForm
 
 
@@ -13,6 +13,7 @@ def home_view(request, *args, **kwargs):
     car_in_sock = CarInStock.objects.all()
     if request.method == "POST":
         form = OwnCalculatingForm(request.POST)
+
         if form.is_valid():
             leasing_term = form.cleaned_data['leasing_term']
             car_year = form.cleaned_data['car_year']

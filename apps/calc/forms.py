@@ -2,7 +2,6 @@ from django import forms
 from .models import CarRequest
 
 
-
 class ReviewForm(forms.ModelForm):
     class Meta:
         model = CarRequest
@@ -13,5 +12,3 @@ class ReviewForm(forms.ModelForm):
             'car_year': 'Year',
             'car_first_payment': "First payment"
         }
-
-

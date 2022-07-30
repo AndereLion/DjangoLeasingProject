@@ -1,0 +1,12 @@
+.car_added_box{
+    width: 100%;
+    height: 880px;
+    display: flex;
+    justify-content: center;
+
+}
+.car_added_box_inner{
+    margin-top: 100px;
+    width: 800px;
+    text-align: center;
+}

@@ -1,0 +1,47 @@
+.admin_panel_box {
+    width: 100%;
+    height: 850px;
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+.admin_panel_box p {
+
+    font-size: 23px;
+    margin: 15px;
+    display: flex;
+    justify-content: center;
+}
+
+.admin_panel_inner {
+    background: #E0DEC9;
+    border: #c2bfbf 2px solid;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    flex-wrap: wrap;
+    width: 800px;
+    height: 100%;
+    opacity: 50%;
+}
+
+.admin_panel_form_box {
+    display: flex;
+    justify-content: center;
+    margin-right: 100px;
+}
+
+.admin_panel_form_original {
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+}
+
+.admin_panel_form_original input {
+    border-radius: 10px;
+    height: 35px;
+    width: 300px;
+}

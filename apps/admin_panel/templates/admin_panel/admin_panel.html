@@ -1,0 +1,16 @@
+{% extends 'home/base.html' %}
+{% block main %}
+    <div class="admin_panel_box">
+        <div class="admin_panel_inner">
+            <h2>Add car to the stock</h2>
+            <div class="admin_panel_form_box">
+                <form class="admin_panel_form_original" enctype="multipart/form-data" action="" method="post">
+
+                    {% csrf_token %}
+                    {{ form.as_p }}
+                    <input type="submit" name="submit" value="Submit">
+                </form>
+            </div>
+        </div>
+    </div>
+{% endblock %}

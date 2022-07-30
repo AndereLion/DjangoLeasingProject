@@ -10,7 +10,11 @@
 
 
                 <input type="password" name="password" placeholder="password">
-
+                {% if messages %}
+                    {% for message in messages %}
+                        <h4 style="text-align: center">{{ message }} </h4>
+                    {% endfor %}
+                {% endif %}
                 <input type="submit" value="Login">
 
             </form>

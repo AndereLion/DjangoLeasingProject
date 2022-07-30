@@ -1,6 +1,7 @@
 from django.contrib.auth.models import User
 from django.shortcuts import render, redirect
 from django.contrib.auth import login, authenticate, logout
+from django.contrib import messages
 
 
 # Create your views here.
@@ -17,8 +18,8 @@ def user_login_view(request, *args, **kwargs):
 
             return redirect('home:home')
         except:
-
-            print('User or password is incorrect')
+            messages.error(request, 'User or password is incorrect')
+            print()
 
     return render(request, 'user/login_page.html')
 

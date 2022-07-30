@@ -9,6 +9,9 @@
 .form_box p {
     font-size: 25px;
     margin: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .form_inner {
@@ -22,7 +25,7 @@
 }
 
 .form_original {
-    text-align: right;
+    text-align: center;
     margin-top: 30px;
 }
 

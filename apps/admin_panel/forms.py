@@ -1,5 +1,5 @@
 from django import forms
-from apps.admin_panel.models import CarInStock
+from apps.admin_panel.models import CarInStock, ImagesCarPortfolio
 
 
 class CarInStockForm(forms.ModelForm):
@@ -14,3 +14,10 @@ class CarInStockForm(forms.ModelForm):
             'year': "Year",
             'first_payment': "First payment"
         }
+
+
+class ImagesCarPortfolioForm(forms.ModelForm):
+    class Meta:
+        model = ImagesCarPortfolio
+        fields = ['img', 'car']
+        labels = {'img': "Images"}

@@ -14,9 +14,8 @@ def admin_panel_view(request, *args, **kwargs):
 
         if form.is_valid():
             form.save()
-            # return redirect(reverse('calc:thank_you', ))
-            form = CarInStockForm()
-            return redirect('admin_panel:car_added')
+
+            return render(request, 'admin_panel/car_added.html')
 
     else:
         form = CarInStockForm()

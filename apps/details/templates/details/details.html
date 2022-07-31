@@ -19,9 +19,27 @@
                 </div>
             </div>
             <div class="main_inner_bottom">
+                {% if request.user.is_superuser %}
+
+                    <form class="admin_panel_form_original" enctype="multipart/form-data"
+                          action="" method="post">
+
+                        {% csrf_token %}
+                        {{ form.as_p }}
+                        <input type="submit" name="submit" value="Submit">
+                    </form>
+                {% endif %}
                 {% for photo in car_portfolio %}
-                    <img class="img_portfolio" src="{{ photo.img.url }}" alt="">
+                    <div class="photo_box">
+                        <img class="img_portfolio" src="{{ photo.img.url }}" alt="">
+                        {% if request.user.is_superuser %}
+                            <a href="{% url 'details:photo_in_portfolio_delete' photo.id car.id %}">
+                                <button type="button" class="btn btn-danger">Delete</button>
+                            </a>
+                        {% endif %}
+                    </div>
                 {% endfor %}
+
             </div>
         </div>
     </div>

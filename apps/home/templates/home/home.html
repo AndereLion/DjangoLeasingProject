@@ -54,9 +54,13 @@
                                                 <button type="button" class="btn btn-sm btn-outline-secondary">Details
                                                 </button>
                                             </a>
-                                            <a href="{% url 'admin_panel:car_delete' car.id %}">
-                                                <button type="button" class="btn btn-danger">Delete</button>
-                                            </a>
+                                            {% if request.user.is_superuser %}
+                                                <a href="{% url 'admin_panel:car_delete' car.id %}">
+                                                    <button type="button" class="btn btn-danger">Delete</button>
+                                                </a>
+
+
+                                            {% endif %}
                                         </div>
                                         <small class="text-muted">First payment: {{ car.first_payment }}</small>
                                     </div>
